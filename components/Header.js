@@ -8,7 +8,8 @@ import {
     Flex,
     Input,
     InputGroup,
-    InputLeftElement
+    InputLeftElement,
+    Avatar,
   } from "@chakra-ui/react"
 import { ChevronDownIcon, SearchIcon } from '@chakra-ui/icons'
 import Head from 'next/head'
@@ -74,8 +75,7 @@ export default function Header(props) {
                         />
                         <Input backgroundColor="gray.100" borderRadius="0" type="tel" placeholder="Search all icons" />
                     </InputGroup>
-                    <Button variant="ghost" px={7}>Log In</Button>
-                    <Button px={7} backgroundColor="#1199FA" color="white">Sign Up</Button>
+                    <Avatar w="40px" h="40px" bg="gray.500" />
                     <div>
                         <Menu>
                             <MenuButton as={Button} variant="ghost" rightIcon={<ChevronDownIcon />}>

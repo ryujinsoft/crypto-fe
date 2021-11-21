@@ -5,6 +5,19 @@ import Sidebar from '../components/Sidebar'
 
 
 export default function Main() {
+    const sendData = () => {
+
+        fetch('http://localhost:8080/api/signin', { method: 'GET' })
+            .then(res => res.json())
+            .then(data => {
+                if (data.msg == 'success') {
+                    return router.push('/signin')
+                }
+            })
+            .catch(rejected => {
+                alert(rejected)
+            })
+    }
 
     return (
         <div className={styles.content} >

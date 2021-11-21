@@ -3,9 +3,20 @@ import Sidebar from '../components/Sidebar'
 
 import styles from '../styles/Personal.module.css'
 import { Grid, GridItem, Input, Text, Heading, Box, Link, Divider , Button } from '@chakra-ui/react'
+import { useState } from 'react'
 
 
-export default function Main() {
+export default function Main(props) {
+
+    const [email, setEmail] = useState("")
+    const [fullName, setFullName] = useState("")
+
+    const submit = e => {
+        e.preventDefault()
+        console.log("email nih bos", email)
+        setFullName("Senggol dong")
+    }
+
 
     return (
         <div className={styles.content} >
@@ -38,14 +49,24 @@ export default function Main() {
 
                             
                             <Text mt={2} mb={2} fontSize="md"> Email </Text>
-                            <Input placeholder="Email" size="lg"></Input>
+                            <Input 
+                                placeholder="Email"
+                                size="lg"
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                            ></Input>
                             <Text mt={4} mb={2} fontSize="md"> Full Name </Text>
-                            <Input placeholder="Full Name" size="lg"></Input>
+                            <Input
+                                placeholder="Full Name"
+                                size="lg"
+                                value={fullName}
+                                onChange={e => setFullName(e.target.value)}
+                            ></Input>
                             <Text mt={4} mb={2} fontSize="md"> Date Of Birth </Text>
                             <Input placeholder="Date Of Birth" size="lg"></Input>
                             <Text mt={4} mb={2} fontSize="md"> Phone Number </Text>
                             <Input placeholder="Phone Number" size="lg"></Input>
-                            <Button bg="blue.300" color="#FFFFFF" width="100%" size="lg" mt={7}>Continue</Button>
+                            <Button onClick={submit} bg="blue.300" color="#FFFFFF" width="100%" size="lg" mt={7}>Continue</Button>
                             </div>
                         </GridItem>
 

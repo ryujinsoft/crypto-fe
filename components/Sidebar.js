@@ -14,7 +14,7 @@ function ActiveLink({ children, href }) {
 
     return (
 
-        <Link href={href} onClick={handleClick} color={color} m={4}>
+        <Link href={href} onClick={handleClick} color={color} m={4} display={'block'}>
             <Text fontSize="lg" >{children}</Text>
         </Link>
     )

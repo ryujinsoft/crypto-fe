@@ -15,7 +15,7 @@ import { ChevronDownIcon, SearchIcon } from '@chakra-ui/icons'
 import Head from 'next/head'
 import styles from '../styles/Navbar.module.css'
 
-export default function Header(props) {
+export default function Header() {
 
     return (
         <div className={styles.navbar}>
@@ -69,10 +69,9 @@ export default function Header(props) {
                 </Flex>
                 <Flex style={{ marginLeft: 'auto', gap: '2px' }}>
                     <InputGroup borderColor="gray.300" mr={3}>
-                        <InputLeftElement
-                            pointerEvents="none"
-                            children={<SearchIcon color="gray.500" />}
-                        />
+                        <InputLeftElement pointerEvents="none">
+                            <SearchIcon color="gray.500" />
+                        </InputLeftElement>
                         <Input backgroundColor="gray.100" borderRadius="0" type="tel" placeholder="Search all icons" />
                     </InputGroup>
                     <Avatar w="40px" h="40px" bg="gray.500" />

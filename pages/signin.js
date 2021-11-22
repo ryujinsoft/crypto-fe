@@ -31,7 +31,7 @@ function Signin() {
                 }
             })
             .catch(rejected => {
-                alert(rejected)
+                console.log(rejected)
             })
     }
 
@@ -77,7 +77,7 @@ function Signin() {
                     <Input placeholder="Email" size="lg"></Input>
                     <Text mt={4} mb={2} fontSize="sm"> Password </Text>
                     <Input placeholder="Password" size="lg"></Input>
-                    <Button bg="blue.300" onClick={this.sendData('email=email&passw=passw')} color="#FFFFFF" width="100%" size="lg" mt={7}>Log In</Button>
+                    <Button bg="blue.300" onClick={sendData('email=email&passw=passw')} color="#FFFFFF" width="100%" size="lg" mt={7}>Log In</Button>
 
                     <Link fontSize="sm" color="blue.300" decoration="none" p={3} mt={5} mb>Forget Password?</Link>
 

@@ -1,6 +1,6 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect,useState } from 'react';
 import Router from 'next/router'
-const myPage = ()=>{
+const MyPage = ()=>{
     const [loaded,setLoaded] = useState(false)
     useEffect(() => {
         const {pathname} = Router
@@ -21,8 +21,8 @@ const myPage = ()=>{
     }
     return ( 
         <p>
-            You will see this page only if pathname !== "/" , <br/>
+            You will see this page only if pathname !== &quot;/&quot; , <br/>
         </p> 
     )
 }
-export default myPage
+export default MyPage
